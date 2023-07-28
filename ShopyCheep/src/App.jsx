@@ -1,40 +1,31 @@
-import './App.css'
-import Navegacion from './Navegacion/Navegacion'
+import "./App.css";
+import { MyDataProvider } from "./Context/MyDataContext";
+import Navegacion from "./Navegacion/Navegacion";
+import Places from "./Places/Places";
+import Products from "./Products/Products";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchView from "./Products/SearchView/SearchView";
 
+MyDataProvider;
 
 function App() {
-
-function Layout(){
-  return(<h1>Layout</h1>)
-}
-
-function Home(){
-  return(<h1>Home</h1>)
-}
-
-function Blogs(){
-  return(<h1>Blogs</h1>)
-}
-
-function NoPage(){
-  return(<h1>NoPage</h1>)
-}
-
+  function NoPage() {
+    return <h1>NoPage</h1>;
+  }
 
   return (
-    <>
-      <Navegacion />
-      <BrowserRouter>
+    <BrowserRouter>
+      <MyDataProvider>
+        <Navegacion />
         <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/" element={<Places />} />
+          <Route path="/productos/:supermercado" element={<Products />} />
+          <Route path="/search/productos" element={<SearchView />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter>
-
-    </>
-  )
+      </MyDataProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
