@@ -6,7 +6,7 @@ import Search from '../Inputs/Search'
 const navigation = [
   { name: 'Places', href: 'http://localhost:5173/', current: true },
   { name: 'Products', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
+  { name: 'About', href: 'http://localhost:5173/about/', current: false },
   { name: 'Contact', href: '#', current: false },
 ]
 

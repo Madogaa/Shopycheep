@@ -23,6 +23,7 @@ function ProductsView({category,id_supermercado}) {
     useEffect(() => {
       if (window.location.pathname !== '/search/productos') {
         fetchProducts(category)
+        console.log(`Categoria Actualizada ${category}`)
       }
     },[category])
 

@@ -5,6 +5,7 @@ import Places from "./Places/Places";
 import Products from "./Products/Products";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchView from "./Products/SearchView/SearchView";
+import About from "./About/About";
 
 MyDataProvider;
 
@@ -19,6 +20,7 @@ function App() {
         <Navegacion />
         <Routes>
           <Route path="/" element={<Places />} />
+          <Route path="/about" element={<About />} />
           <Route path="/productos/:supermercado" element={<Products />} />
           <Route path="/search/productos" element={<SearchView />} />
           <Route path="*" element={<NoPage />} />
