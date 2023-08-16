@@ -1,5 +1,5 @@
 const config = {
-    apiDomain: 'https://shopycheep-api-node-madogaa.vercel.app',
+    apiDomain: 'https://shopycheep-api.vercel.app',
   };
 
   export default config;
