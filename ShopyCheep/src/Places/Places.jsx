@@ -12,7 +12,7 @@ function Places() {
 
   async function fetchPlaces(){
       try{
-          const response = await axios.get(`${config.apiDomain}/places/`)
+          const response = await axios.get(`${config.apiDomain}/api/places/`)
           setPlaces(response.data.places)
       }catch{
           setError(error.message)

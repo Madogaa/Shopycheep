@@ -12,7 +12,7 @@ function CategoryList({onLoaded, onNavigate,id_supermercado}) {
 
   const fetchCategorias = async () => {
     try {
-      const response = await axios.get(`${config.apiDomain}/categorias/${id_supermercado}`);
+      const response = await axios.get(`${config.apiDomain}/api/categorias/${id_supermercado}`);
       setCategorias(response.data.categorias);
       setIsLoading(false);
       onLoaded()

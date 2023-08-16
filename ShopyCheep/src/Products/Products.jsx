@@ -44,7 +44,7 @@ function Products(props) {
   useEffect(() => {
     // Efecto para obtener el id_supermercado una vez al montar el componente
     const getSuperMarketId = async () => {
-      const response = await axios.get(`${config.apiDomain}/obtener-id-supermercado/${supermercado}/`);
+      const response = await axios.get(`${config.apiDomain}/api/obtener-id-supermercado/${supermercado}/`);
       setId_supermercado(response.data.id_supermercado);
       setCategory(response.data.id_supermercado === 1 ? 1: 185)
     };

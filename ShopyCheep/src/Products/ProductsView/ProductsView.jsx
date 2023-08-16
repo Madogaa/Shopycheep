@@ -12,7 +12,7 @@ function ProductsView({category,id_supermercado}) {
 
     async function fetchProducts(category){
         try{
-            const response = await axios.get(`${config.apiDomain}/dia/productos/subcategoria/${category}/`)
+            const response = await axios.get(`${config.apiDomain}/api/productos/subcategoria/${category}/`)
             updateProducts(response.data.productos)
         }catch{
             setError(error.message)

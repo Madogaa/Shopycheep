@@ -11,7 +11,7 @@ function CategoryItem({item, activePanel, handlePanelClick, onSubcategoriaClick}
     const fetchSubcategorias = async (categoriaId) => {
       setIsLoadingSubcategorias(true);
       try {
-        const response = await axios.get(`${config.apiDomain}/dia/categorias/${categoriaId}/subcategorias`);
+        const response = await axios.get(`${config.apiDomain}/api/categorias/${categoriaId}/subcategorias`);
         setSubcategorias(response.data.subcategorias);
       } catch (error) {
         console.error(error);
