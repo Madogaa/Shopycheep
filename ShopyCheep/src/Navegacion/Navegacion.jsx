@@ -4,10 +4,10 @@ import { Bars3Icon, BellIcon,  XMarkIcon } from '@heroicons/react/24/outline'
 import Search from '../Inputs/Search'
 
 const navigation = [
-  { name: 'Places', href: 'http://localhost:5173/', current: true },
-  { name: 'Products', href: '#', current: false },
-  { name: 'About', href: 'http://localhost:5173/about/', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Places', href: '/', current: true },
+  { name: 'Products', href: '/', current: false },
+  { name: 'About', href: '/about/', current: false },
+  { name: 'Contact', href: '/', current: false },
 ]
 
 const profile_options = [
