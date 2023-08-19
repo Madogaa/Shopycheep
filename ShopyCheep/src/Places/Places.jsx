@@ -28,7 +28,7 @@ function Places() {
 
   return (
     <>
-    <div className="p-8 grid grid-cols-3 gap-10">
+    <div className="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
     {places.map((item,index) => (
         <CardPlaces key={index} id_place={item.id_place} title={item.titulo} imagen={item.imagen} desc={item.descripcion}  />
       ))}
